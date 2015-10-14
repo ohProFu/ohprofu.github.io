@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Corso di Sistemi e Reti by ohProFu</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header>
+        <h1>Corso di Sistemi e Reti</h1>
+        <p>A Cura di Gabriele Della Torre</p>
+      <p class="view"><a href="https://github.com/ohProFu">Visita il mio profilo Github!</a></p>
+      </header>
+      <section>
+
+      #### Lezione 2
+
+      Non sempre è possibile determinare se una parola fa parte di un linguaggio
+      perchè le parole del linguaggio sono infinite
+
+      Enigma lupo, cavolfiore pecora: soluzione proposta pslpcsp è modellata tramite
+      riconoscitore
+
+      Si tratta di una parola (pslpcsp) che appartiene all'alfabeto del problema
+
+      Il sistema riconoscitore che risolve il problema riconosce le parole che
+      rappresentano le mosse da eseguire
+
+      Nella macchina a stati vediamo che le possibilità per raggiungere la soluzione
+      sono infinite, quindi solo un riconoscitore macchina a stati può risolverlo.
+
+      L'insieme delle soluzione sono le parole x che sono formate combinando le lettere
+      dell'alfabeto (l,p,c,s) che alla fine portano allo stato finale desiderato.
+
+      Durante una transizione di stato la macchina si assume essere nello stato precedente
+
+      Modello con memoria: arriva ad uno stato ma si ricorda anche tutti i passaggi
+
+      Automa completamente specificato: risponde ad ogni tipo di input. Se un sistema è
+      parzialmente specificato, non si può sapere come si comporta quando riceve un input
+      non previsto/specificato
+
+      Equivale a scrivere un software che non specifica una reazione in alcuni casi
+
+      Automa a stati finiti: la funzione di transizione di stato usa lo stato corrente e
+      il simbolo in ingresso per determinare lo stato a cui transizionare
+
+      Automa di Moore: ogni stato ha un output diverso
+
+      Automa per la cancellazione di commenti da un file c:
+
+      (0) incontro una slash entro nello stato in cui vedo se c'è una slash piu asterisco (1)
+
+      da 1 trovo una slash: entro nello stato cancellazione inline (2), esco solo se incontro la fine della riga
+
+      da 1 trovo un asterisco: entro nello stato cancellazione multiriga (3), se incontro asterisco entro nello stato possibile uscita (4)
+
+      da 4 trovo un asterisco, rimango in 4. Trovo una slash torno allo stato iniziale, trovo un altro simbolo, torno al 3.
+
+      __Macchina di turing (mdt)__
+
+      nello schema, sulle transizioni, 1/0 significa che in caso di input 1 faccio
+      la transizione e ritorno 0 come output
+
+      Nell'esame chiede la scrittura di quintuple della mdt
+
+      La macchina di turing ha una riga in piu alla fine della tabella
+      perchè la macchina di turing deve terminare il calcolo con una transazione
+      che arresta la macchina
+
+      La macchina di turing esegue gli algoritmi. Permette di conoscere la calcolabilità
+      (tesi di Church molto importante)
+
+      Un'istruzione di una mdt si chiama quintupla
+
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="jquery-2.1.4.min.js"></script>
+
+  </body>
+</html>
